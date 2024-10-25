@@ -30,7 +30,7 @@ const Banner = () => {
   }
 
   return (
-    <div id="banner"> 
+    <div id="banner" style={{ marginTop: '150px' }}> 
       {/* Banner de imágenes en carrusel */}
       <Carousel style={{ width: '100%' }}>
         {triplets.map((triplet, index) => (
