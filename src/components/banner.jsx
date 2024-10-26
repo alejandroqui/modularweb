@@ -53,12 +53,12 @@ const Banner = () => {
 
       {/* Descripción de productos y servicios en dos columnas */}
       <div style={{ padding: '20px', backgroundColor: '#f8f9fa' }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Descubre nuestros productos y servicios</h2><br /><br />
+        <h2 style={{ textAlign: 'center', marginBottom: '20px', color: '#595656' }}>Descubre nuestros productos y servicios</h2>
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
           {/* Columna izquierda: Productos */}
           <div style={{ flex: 1, paddingRight: '20px' }}>
-            <h2>Productos</h2>
-            <ul style={{ fontSize: '18px', lineHeight: '1.8', marginLeft: '20px' }}>
+            <h2 style={{ color: '#595656' }}>Productos</h2>
+            <ul style={{ fontSize: '18px', lineHeight: '1.8', marginLeft: '20px', color: '#595656' }}>
               <li>Escritorios modulares sencillos, tipo L y gamer.</li>
               <li>Armarios y cajoneras de diferentes tamaños y estilos.</li>
               <li>Camas modulares y base camas.</li>
@@ -68,8 +68,8 @@ const Banner = () => {
 
           {/* Columna derecha: Servicios */}
           <div style={{ flex: 1, paddingLeft: '20px' }}>
-            <h2>Servicios</h2>
-            <ul style={{ fontSize: '18px', lineHeight: '1.8', marginLeft: '20px' }}>
+            <h2 style={{ color: '#595656' }}>Servicios</h2>
+            <ul style={{ fontSize: '18px', lineHeight: '1.8', marginLeft: '20px', color: '#595656' }}>
               <li>Asesoría en diseño de interiores para optimizar tus espacios.</li>
               <li>Instalación de muebles.</li>
               <li>Opciones de financiamiento para adaptarse a tu presupuesto.</li>
