@@ -21,10 +21,10 @@ const Footer = () => {
         <Row>
           {/* Redes Sociales */}
           <Col md={3} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around' }}>
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/people/Outlet-Modular/61566455640822/?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faFacebookF} style={{ fontSize: '30px', color: 'white' }} />
             </a>
-            <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/3052423779" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faWhatsapp} style={{ fontSize: '30px', color: 'white' }} />
             </a>
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
