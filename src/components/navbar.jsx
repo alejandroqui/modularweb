@@ -15,7 +15,7 @@ const navbar = () => {
           <img
             src={logo} // Ruta de la imagen
             alt="Modular Outlet Logo"
-            style={{ height: '100px', marginRight: '10px' }} // Ajusta el tamaño y el margen según sea necesario
+            style={{ height: '150px', marginRight: '10px' }} // Ajusta el tamaño y el margen según sea necesario
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
