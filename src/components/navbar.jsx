@@ -15,7 +15,7 @@ const navbar = () => {
           <img
             src={logo} // Ruta de la imagen
             alt="Modular Outlet Logo"
-            style={{ height: '150px', marginRight: '10px' }} // Ajusta el tamaño y el margen según sea necesario
+            style={{ height: '100px', marginRight: '10px' }} // Ajusta el tamaño y el margen según sea necesario
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -26,9 +26,9 @@ const navbar = () => {
             <Nav.Link href="#clients">Nuestros Clientes</Nav.Link>
             <NavDropdown title="Más" id="basic-nav-dropdown">
               <NavDropdown.Item href="#Us">Nosotros</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Preguntas Frecuentes</NavDropdown.Item>
+              <NavDropdown.Item href="#faq">Preguntas Frecuentes</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Contáctanos!</NavDropdown.Item>
+              <NavDropdown.Item href="#contact">Contáctanos!</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

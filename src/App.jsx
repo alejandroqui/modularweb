@@ -5,6 +5,9 @@ import Banner from './components/banner';
 import Products from './components/products';
 import Clients from './components/clients';
 import Us from './components/us';
+import FAQ from './components/faq';
+import ContactUs from './components/contactUs';
+import Footer from './components/footer';
 
 const App = () => {
   return (
@@ -14,6 +17,9 @@ const App = () => {
       <Products />
       <Clients />
       <Us />
+      <FAQ />
+      <ContactUs />
+      <Footer />
     </div>
   );
 };

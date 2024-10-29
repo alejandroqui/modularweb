@@ -23,17 +23,16 @@ const experiencias = [
 
 const Clientes = () => {
   return (
-    <div id="clients" style={{ padding: '40px' }}>
-      {/* Franja negra con el título "Clientes" */}
+    <div id="clients">
+      {/* Franja negra con el título "Productos" */}
       <div style={{
         backgroundColor: '#595656',
-        height: '80px',
+        height: '100px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         color: 'white',
         fontSize: '2rem',
-        marginBottom: '40px',
       }}>
         <h1>Clientes</h1>
       </div>

@@ -9,7 +9,7 @@ const Nosotros = () => {
       {/* Estilo para el título, ocupando todo el ancho */}
       <div  id="Us" style={{
         backgroundColor: '#595656',
-        height: '80px',
+        height: '100px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -63,6 +63,9 @@ const Nosotros = () => {
           </Col>
         </Row>
       </Container>
+      <br />
+      <br />
+      <br />
     </>
   );
 };
