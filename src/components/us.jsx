@@ -23,7 +23,7 @@ const Nosotros = () => {
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundColor: 'rgba(0, 0, 0, 0.6)', // Aumenta la transparencia
+        backgroundColor: 'rgba(0, 0, 0, 0.7)', // Aumenta la transparencia
         zIndex: 1,
       }} />
 

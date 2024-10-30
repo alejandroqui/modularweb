@@ -62,7 +62,7 @@ const Contactanos = () => {
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundColor: 'rgba(0, 0, 0, 0.6)', // Ajusta el nivel de opacidad
+        backgroundColor: 'rgba(0, 0, 0, 0.7)', // Ajusta el nivel de opacidad
         zIndex: 1,
       }} />
 
@@ -93,7 +93,7 @@ const Contactanos = () => {
                 value={formData.nombre}
                 onChange={handleChange}
                 required
-                style={{ backgroundColor: '#595656', color: 'white' }} // Estilo del campo
+                style={{ backgroundColor: 'white', color: '#595656' }} // Fondo blanco, texto en gris oscuro
               />
             </Form.Group>
 
@@ -105,7 +105,7 @@ const Contactanos = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                style={{ backgroundColor: '#595656', color: 'white' }} // Estilo del campo
+                style={{ backgroundColor: 'white', color: '#595656' }} // Fondo blanco, texto en gris oscuro
               />
             </Form.Group>
 
@@ -117,7 +117,7 @@ const Contactanos = () => {
                 value={formData.telefono}
                 onChange={handleChange}
                 required
-                style={{ backgroundColor: '#595656', color: 'white' }} // Estilo del campo
+                style={{ backgroundColor: 'white', color: '#595656' }} // Fondo blanco, texto en gris oscuro
               />
             </Form.Group>
 
@@ -130,11 +130,25 @@ const Contactanos = () => {
                 value={formData.mensaje}
                 onChange={handleChange}
                 required
-                style={{ backgroundColor: '#595656', color: 'white' }} // Estilo del campo
+                style={{ backgroundColor: 'white', color: '#595656' }} // Fondo blanco, texto en gris oscuro
               />
             </Form.Group>
 
-            <Button variant="primary" type="submit" className="mt-3">
+            {/* Botón Enviar con nuevos estilos */}
+            <Button
+              variant="primary"
+              type="submit"
+              style={{
+                backgroundColor: '#595656',
+                border: 'none',
+                padding: '12px 24px',
+                fontSize: '1.1rem',
+                width: '200px',
+                height: '50px',
+                borderRadius: '0',
+                marginTop: '20px', // Espacio superior
+              }}
+            >
               Enviar
             </Button>
           </Form>
@@ -147,5 +161,7 @@ const Contactanos = () => {
 };
 
 export default Contactanos;
+
+
 
 

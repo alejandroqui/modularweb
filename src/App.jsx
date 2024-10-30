@@ -11,7 +11,7 @@ import Footer from './components/footer';
 
 const App = () => {
   return (
-    <div>
+    <div style={{ marginTop: '150px' }}> {/* Ajusta el margen superior según la altura del footer */}
       <MyNavbar />
       <Banner />
       <Products />
@@ -25,3 +25,4 @@ const App = () => {
 };
 
 export default App;
+
