@@ -9,24 +9,48 @@ import producto6 from '../assets/banner6.jpeg';
 import producto7 from '../assets/banner7.jpeg';
 import producto8 from '../assets/banner8.jpeg';
 import producto9 from '../assets/banner9.jpeg';
-import fondo from '../assets/banner5.jpeg'; // Imagen de fondo
+import producto10 from '../assets/banner10.jpeg';
+import producto11 from '../assets/banner11.jpeg';
+import producto12 from '../assets/banner12.jpeg';
+import producto13 from '../assets/banner13.jpeg';
+import producto14 from '../assets/banner14.jpeg';
+import producto15 from '../assets/banner15.jpeg';
+import producto16 from '../assets/banner16.jpg';
+import producto17 from '../assets/banner17.jpeg';
+import producto18 from '../assets/banner18.jpeg';
+import producto19 from '../assets/banner19.jpeg';
+
+import fondo from '../assets/banner5.jpeg';
 
 const productos = [
-  { id: 1, nombre: 'Escritorio gamer max Modular', descripcion: 'Lleva tu experiencia de juego a un nuevo nivel...', img: producto1 },
-  { id: 2, nombre: 'Escritorio en L Axis modular', descripcion: 'Diseño de vanguardia...', img: producto2 },
-  { id: 3, nombre: 'Escritorio gamer Domo modular', descripcion: 'El escritorio gamer domo te ofrece...', img: producto3 },
-  { id: 4, nombre: 'Mesa de television Urban modular', descripcion: 'Nada como el toque exclusivo...', img: producto4 },
-  { id: 5, nombre: 'Escritorio gamer Basic modular', descripcion: 'El escritorio gamer basic esta pensado...', img: producto5 },
-  { id: 6, nombre: 'Mesa de Television Town modular', descripcion: 'Dale un diseño rustico...', img: producto6 },
-  { id: 7, nombre: 'Escritorio gamer Trinity modular', descripcion: 'El mas top del segmento...', img: producto7 },
-  { id: 8, nombre: 'Centro de Entretenimiento Roni modular', descripcion: 'Tu sala tambien quiere sentirse...', img: producto8 },
-  { id: 9, nombre: 'Escritorio basic Batistine modular', descripcion: 'Si te gusta el minimalismo...', img: producto9 },
+  { id: 1, nombre: 'Escritorio gamer max blue', descripcion: 'Lleva tu experiencia de juego a un nuevo nivel...', img: producto1, categoria: 'zona gamer' },
+  { id: 2, nombre: 'Escritorio en L Axis modular', descripcion: 'Diseño de vanguardia...', img: producto2, categoria: 'estudio' },
+  { id: 3, nombre: 'Escritorio gamer Domo modular', descripcion: 'El escritorio gamer domo te ofrece...', img: producto3, categoria: 'zona gamer' },
+  { id: 4, nombre: 'Mesa de television Urban modular', descripcion: 'Nada como el toque exclusivo...', img: producto4, categoria: 'sala' },
+  { id: 5, nombre: 'Escritorio gamer Basic modular', descripcion: 'El escritorio gamer basic esta pensado...', img: producto5, categoria: 'zona gamer' },
+  { id: 6, nombre: 'Mesa de Television Town modular', descripcion: 'Dale un diseño rustico...', img: producto6, categoria: 'sala' },
+  { id: 7, nombre: 'Escritorio gamer Trinity modular', descripcion: 'El mas top del segmento...', img: producto7, categoria: 'zona gamer' },
+  { id: 8, nombre: 'Centro de Entretenimiento Roni modular', descripcion: 'Tu sala también quiere sentirse...', img: producto8, categoria: 'sala' },
+  { id: 9, nombre: 'Escritorio basic Batistine modular', descripcion: 'Si te gusta el minimalismo...', img: producto9, categoria: 'estudio' },
+  { id: 10, nombre: 'Escritorio gamer Lax blue', descripcion: 'Si te gusta el minimalismo...', img: producto10, categoria: 'zona gamer' },
+  { id: 11, nombre: 'Escritorio gamer Lax red', descripcion: 'Si te gusta el minimalismo...', img: producto11, categoria: 'zona gamer' },
+  { id: 12, nombre: 'Escritorio gamer max red', descripcion: 'Si te gusta el minimalismo...', img: producto12, categoria: 'zona gamer' },
+  { id: 13, nombre: 'Mesa tv Good 50"', descripcion: 'Si te gusta el minimalismo...', img: producto13, categoria: 'sala' },
+  { id: 14, nombre: 'Mesa tv Mikasa 65"', descripcion: 'Si te gusta el minimalismo...', img: producto14, categoria: 'sala' },
+  { id: 15, nombre: 'Mesa tv Flat 65"', descripcion: 'Si te gusta el minimalismo...', img: producto15, categoria: 'sala' },
+  { id: 16, nombre: 'Mesa tv Tunez"', descripcion: 'Si te gusta el minimalismo...', img: producto16, categoria: 'sala' },
+  { id: 17, nombre: 'Mesa tv y sonido Prato Rovere 32"', descripcion: 'Si te gusta el minimalismo...', img: producto17, categoria: 'sala' },
+  { id: 18, nombre: 'Mesa tv y sonido Prato wengue 32"', descripcion: 'Si te gusta el minimalismo...', img: producto18, categoria: 'sala' },
+  { id: 19, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto19, categoria: 'sala' },
 ];
 
+const categorias = ['zona gamer', 'habitación', 'sala', 'estudio', 'baño', 'cocina'];
+
 const Productos = () => {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState({});
   const [showModal, setShowModal] = useState(false);
   const [selectedProducto, setSelectedProducto] = useState(null);
+  const [mostrarTodasCategorias, setMostrarTodasCategorias] = useState(false);
 
   const handleCardClick = (producto) => {
     setSelectedProducto(producto);
@@ -38,8 +62,16 @@ const Productos = () => {
     setSelectedProducto(null);
   };
 
-  const productosIniciales = productos.slice(0, 6);
-  const productosExtra = productos.slice(6);
+  const toggleExpanded = (categoria) => {
+    setExpanded((prevExpanded) => ({
+      ...prevExpanded,
+      [categoria]: !prevExpanded[categoria],
+    }));
+  };
+
+  const toggleMostrarCategorias = () => {
+    setMostrarTodasCategorias(!mostrarTodasCategorias);
+  };
 
   return (
     <div
@@ -59,7 +91,7 @@ const Productos = () => {
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundColor: 'rgba(0, 0, 0, 0.7)', // Ajusta el nivel de opacidad
+        backgroundColor: 'rgba(0, 0, 0, 0.7)',
         zIndex: 1,
       }} />
 
@@ -79,66 +111,78 @@ const Productos = () => {
           <h1>Productos</h1>
         </div>
 
-        {/* Sección de las tarjetas de productos */}
+        {/* Botón de desplegar categorías */}
+        <div style={{ textAlign: 'center', margin: '20px 0' }}>
+          <Button
+            variant="primary"
+            onClick={toggleMostrarCategorias}
+            style={{
+              backgroundColor: '#595656',
+              border: 'none',
+              padding: '12px 24px',
+              fontSize: '1.1rem',
+              width: '250px',
+              height: '70px',
+              borderRadius: '20%',
+            }}
+          >
+            {mostrarTodasCategorias ? 'Mostrar menos' : 'Desplegar Catalogo'}
+          </Button>
+        </div>
+
+        {/* Sección de las categorías */}
         <div style={{ padding: '20px' }}>
-          <Row>
-            {productosIniciales.map((producto) => (
-              <Col key={producto.id} md={4} className="mb-4">
-                <Card onClick={() => handleCardClick(producto)} style={{ width: '80%', margin: 'auto', cursor: 'pointer' }}>
-                  <Card.Img variant="top" src={producto.img} style={{ height: '400px', objectFit: 'cover' }} />
-                  <Card.Body>
-                    <Card.Title style={{ fontSize: '1.25rem' }}>{producto.nombre}</Card.Title>
-                    <Card.Text style={{ fontSize: '0.9rem' }}>{producto.descripcion}</Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
+          {categorias.map((categoria, index) => {
+            if (!mostrarTodasCategorias && index > 0) return null;
 
-          {/* Botón para desplegar más productos */}
-          {productosExtra.length > 0 && (
-            <>
-              <Collapse in={expanded}>
-                <div>
-                  <Row>
-                    {productosExtra.map((producto) => (
-                      <Col key={producto.id} md={4} className="mb-4">
-                        <Card onClick={() => handleCardClick(producto)} style={{ width: '80%', margin: 'auto', cursor: 'pointer' }}>
-                          <Card.Img variant="top" src={producto.img} style={{ height: '400px', objectFit: 'cover' }} />
-                          <Card.Body>
-                            <Card.Title style={{ fontSize: '1.25rem' }}>{producto.nombre}</Card.Title>
-                            <Card.Text style={{ fontSize: '0.9rem' }}>{producto.descripcion}</Card.Text>
-                          </Card.Body>
-                        </Card>
-                      </Col>
-                    ))}
-                  </Row>
-                </div>
-              </Collapse>
+            const productosCategoria = productos.filter((producto) => producto.categoria === categoria);
+            const productosVisibles = expanded[categoria] ? productosCategoria : productosCategoria.slice(0, 3);
 
-              <div style={{ textAlign: 'center', marginTop: '10px' }}>
-                <Button
-                  variant="primary"
-                  onClick={() => setExpanded(!expanded)}
-                  style={{
-                    backgroundColor: '#595656',
-                    border: 'none',
-                    padding: '12px 24px',
-                    fontSize: '1.1rem',
-                    width: '200px',
-                    height: '50px',
-                    borderRadius: '0',
-                  }}
-                >
-                  {expanded ? 'Mostrar menos' : 'Mostrar más'}
-                </Button>
+            return (
+              <div key={categoria} style={{ marginBottom: '40px' }}>
+                {/* Título de la categoría */}
+                <h2 style={{ color: 'white', fontSize: '1.8rem', textTransform: 'capitalize' }}>{categoria}</h2>
+                <Row>
+                  {productosVisibles.map((producto) => (
+                    <Col key={producto.id} md={4} className="mb-4">
+                      <Card onClick={() => handleCardClick(producto)} style={{ width: '80%', margin: 'auto', cursor: 'pointer' }}>
+                        <Card.Img variant="top" src={producto.img} style={{ height: '250px', objectFit: 'cover' }} />
+                        <Card.Body>
+                          <Card.Title style={{ fontSize: '1.25rem' }}>{producto.nombre}</Card.Title>
+                          <Card.Text style={{ fontSize: '0.9rem' }}>{producto.descripcion}</Card.Text>
+                        </Card.Body>
+                      </Card>
+                    </Col>
+                  ))}
+                </Row>
+
+                {/* Botón de mostrar más */}
+                {productosCategoria.length > 3 && (
+                  <div style={{ textAlign: 'center', marginTop: '10px' }}>
+                    <Button
+                      variant="primary"
+                      onClick={() => toggleExpanded(categoria)}
+                      style={{
+                        backgroundColor: '#595656',
+                        border: 'none',
+                        padding: '12px 24px',
+                        fontSize: '1.1rem',
+                        width: '200px',
+                        height: '50px',
+                        borderRadius: '0',
+                      }}
+                    >
+                      {expanded[categoria] ? 'Mostrar menos' : 'Mostrar más'}
+                    </Button>
+                  </div>
+                )}
               </div>
-            </>
-          )}
+            );
+          })}
 
           {/* Modal para mostrar información del producto seleccionado */}
           {selectedProducto && (
-            <Modal show={showModal} onHide={handleCloseModal} size="lg" style={{ maxWidth: '6000px' }}>
+            <Modal show={showModal} onHide={handleCloseModal} size="lg">
               <Modal.Header closeButton>
                 <Modal.Title>{selectedProducto.nombre}</Modal.Title>
               </Modal.Header>
@@ -168,3 +212,6 @@ const Productos = () => {
 };
 
 export default Productos;
+
+
+
