@@ -35,22 +35,22 @@ const Footer = () => {
           {/* Información de Contacto */}
           <Col md={3}>
             <h5>Contacto</h5>
-            <p>Teléfono: +123 456 789</p>
-            <p>Email: info@tuempresa.com</p>
+            <p>Teléfono: +57 305 242 3779</p>
+            <p>Email: outletmodular@gmail.com</p>
           </Col>
 
           {/* Dirección */}
           <Col md={3}>
             <h5>Dirección</h5>
-            <p>Calle Principal #123</p>
-            <p>Ciudad, País</p>
+            <p>Cra 24a #42 - 32</p>
+            <p>Cali, Colombia</p>
           </Col>
 
           {/* Sucursales */}
           <Col md={3}>
             <h5>Sucursales</h5>
-            <p>Sucursal 1: Ciudad A</p>
-            <p>Sucursal 2: Ciudad B</p>
+            <p>Sucursal 1: Cali - asturias</p>
+            <p>Sucursal 2: Dos quebradas - Bosques de la acuarela</p>
           </Col>
         </Row>
         

@@ -1,4 +1,3 @@
-// src/components/Home.jsx
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import img1 from '../assets/banner1.jpeg'; 

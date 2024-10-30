@@ -2,6 +2,7 @@ import React from 'react';
 import cliente1 from '../assets/clientes/cliente1.jpeg';
 import cliente2 from '../assets/clientes/cliente2.jpeg';
 import cliente3 from '../assets/clientes/cliente3.jpeg';
+import fondo from '../assets/banner4.jpeg'; // Imagen de fondo
 
 const experiencias = [
   {
@@ -23,57 +24,84 @@ const experiencias = [
 
 const Clientes = () => {
   return (
-    <div id="clients">
-      {/* Franja negra con el título "Productos" */}
+    <div
+      id="clients"
+      style={{
+        position: 'relative',
+        backgroundImage: `url(${fondo})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        padding: '20px 0',
+      }}
+    >
+      {/* Capa de fondo con opacidad */}
       <div style={{
-        backgroundColor: '#595656',
-        height: '100px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        color: 'white',
-        fontSize: '2rem',
-      }}>
-        <h1>Clientes</h1>
-      </div>
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundColor: 'rgba(0, 0, 0, 0.7)', // Ajusta el nivel de opacidad
+        zIndex: 1,
+      }} />
 
-      {experiencias.map((experiencia, index) => (
-        <div
-          key={experiencia.id}
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            marginBottom: '30px',
-            flexDirection: index % 2 === 0 ? 'row' : 'row-reverse', // Alterna la dirección
-          }}
-        >
-          {/* Imagen del cliente */}
-          <div style={{ flex: '0 0 300px', padding: '10px' }}> {/* Tamaño de imagen aumentado */}
-            <img
-              src={experiencia.img}
-              alt={`Cliente ${experiencia.id}`}
-              style={{
-                width: '100%',
-                height: '100%',
-                maxHeight: '300px', // Imagen más grande
-                objectFit: 'cover',
-                borderRadius: '8px',
-                boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)',
-              }}
-            />
-          </div>
-
-          {/* Texto de la experiencia */}
-          <div style={{ flex: 1, padding: '10px 20px', fontSize: '1.1rem', lineHeight: '1.6' }}>
-            <p style={{ margin: '0', textAlign: 'justify', color: '#595656' }}>{experiencia.texto}</p> {/* Color de texto actualizado */}
-          </div>
+      {/* Contenido */}
+      <div style={{ position: 'relative', zIndex: 2 }}>
+        {/* Franja negra con el título "Clientes" */}
+        <div style={{
+          backgroundColor: '#595656',
+          height: '100px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          color: 'white',
+          fontSize: '2rem',
+          marginTop: '-20px', // Sube la franja para evitar que la imagen de fondo se vea por encima
+        }}>
+          <h1>Clientes</h1>
         </div>
-      ))}
+
+        {experiencias.map((experiencia, index) => (
+          <div
+            key={experiencia.id}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              marginBottom: '30px',
+              flexDirection: index % 2 === 0 ? 'row' : 'row-reverse', // Alterna la dirección
+            }}
+          >
+            {/* Imagen del cliente */}
+            <div style={{ flex: '0 0 300px', padding: '10px' }}> {/* Tamaño de imagen aumentado */}
+              <img
+                src={experiencia.img}
+                alt={`Cliente ${experiencia.id}`}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  maxHeight: '300px', // Imagen más grande
+                  objectFit: 'cover',
+                  borderRadius: '8px',
+                  boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.25)',
+                }}
+              />
+            </div>
+
+            {/* Texto de la experiencia */}
+            <div style={{ flex: 1, padding: '10px 20px', fontSize: '1.1rem', lineHeight: '1.6' }}>
+              <p style={{ margin: '0', textAlign: 'justify', color: 'white' }}>{experiencia.texto}</p> {/* Color de texto en blanco */}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
 export default Clientes;
+
+
 
 
 
