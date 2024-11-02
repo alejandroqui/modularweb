@@ -9,6 +9,12 @@ import img6 from '../assets/banner6.jpeg';
 import img7 from '../assets/banner23.png';
 import img8 from '../assets/banner24.png';
 import img9 from '../assets/banner9.jpeg';
+import img10 from '../assets/banner20.jpeg';
+import img11 from '../assets/banner27.jpeg';
+import img12 from '../assets/banner21.jpeg';
+import img13 from '../assets/banner36.jpeg';
+import img14 from '../assets/banner40.jpeg';
+import img15 from '../assets/banner39.jpeg';
 
 const images = [
   { src: img1, alt: "Primera imagen del banner" },
@@ -20,6 +26,12 @@ const images = [
   { src: img7, alt: "Séptima imagen del banner" },
   { src: img8, alt: "Octava imagen del banner" },
   { src: img9, alt: "Novena imagen del banner" },
+  { src: img10, alt: "Decima imagen del banner" },
+  { src: img11, alt: "Undecima imagen del banner" },
+  { src: img12, alt: "Duodecima imagen del banner" },
+  { src: img13, alt: "Treceava imagen del banner" },
+  { src: img14, alt: "Catorceava imagen del banner" },
+  { src: img15, alt: "Quinceava imagen del banner" },
 ];
 
 const Banner = () => {

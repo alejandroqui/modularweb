@@ -19,6 +19,57 @@ import producto16 from '../assets/banner16.jpg';
 import producto17 from '../assets/banner17.jpeg';
 import producto18 from '../assets/banner18.jpeg';
 import producto19 from '../assets/banner19.jpeg';
+import producto20 from '../assets/banner20.jpeg';
+import producto21 from '../assets/banner21.jpeg';
+import producto22 from '../assets/banner22.jpeg';
+import producto25 from '../assets/banner25.jpeg';
+import producto26 from '../assets/banner26.jpeg';
+import producto27 from '../assets/banner27.jpeg';
+import producto28 from '../assets/banner28.jpeg';
+import producto29 from '../assets/banner29.jpeg';
+import producto30 from '../assets/banner30.jpeg';
+import producto31 from '../assets/banner31.jpeg';
+import producto32 from '../assets/banner32.jpeg';
+import producto33 from '../assets/banner33.jpeg';
+import producto34 from '../assets/banner34.jpeg';
+import producto35 from '../assets/banner35.jpeg';
+import producto36 from '../assets/banner36.jpeg';
+import producto37 from '../assets/banner37.jpeg';
+import producto38 from '../assets/banner38.jpeg';
+import producto39 from '../assets/banner39.jpeg';
+import producto40 from '../assets/banner40.jpeg';
+import producto41 from '../assets/banner41.jpeg';
+import producto42 from '../assets/banner42.jpeg';
+import producto43 from '../assets/banner43.jpeg';
+import producto44 from '../assets/banner44.jpeg';
+import producto45 from '../assets/banner45.jpeg';
+import producto46 from '../assets/banner46.jpeg';
+import producto47 from '../assets/banner47.jpeg';
+import producto48 from '../assets/banner48.jpeg';
+import producto49 from '../assets/banner49.jpeg';
+import producto50 from '../assets/banner50.jpeg';
+import producto51 from '../assets/banner51.jpeg';
+import producto52 from '../assets/banner52.jpeg';
+import producto53 from '../assets/banner53.jpeg';
+import producto54 from '../assets/banner54.jpeg';
+import producto55 from '../assets/banner55.jpeg';
+import producto56 from '../assets/banner56.jpeg';
+import producto57 from '../assets/banner57.jpeg';
+import producto58 from '../assets/banner58.jpeg';
+import producto59 from '../assets/banner59.jpeg';
+import producto60 from '../assets/banner60.jpeg';
+import producto61 from '../assets/banner61.jpeg';
+import producto62 from '../assets/banner61.jpeg';
+import producto63 from '../assets/banner63.jpeg';
+import producto64 from '../assets/banner64.jpeg';
+import producto65 from '../assets/banner65.jpeg';
+import producto66 from '../assets/banner66.jpeg';
+import producto67 from '../assets/banner67.jpeg';
+import producto68 from '../assets/banner68.jpeg';
+import producto69 from '../assets/banner69.jpeg';
+import producto70 from '../assets/banner70.jpeg';
+import producto71 from '../assets/banner71.jpeg';
+import producto72 from '../assets/banner72.jpeg';
 
 import fondo from '../assets/banner5.jpeg';
 
@@ -41,10 +92,61 @@ const productos = [
   { id: 16, nombre: 'Mesa tv Tunez"', descripcion: 'Si te gusta el minimalismo...', img: producto16, categoria: 'sala' },
   { id: 17, nombre: 'Mesa tv y sonido Prato Rovere 32"', descripcion: 'Si te gusta el minimalismo...', img: producto17, categoria: 'sala' },
   { id: 18, nombre: 'Mesa tv y sonido Prato wengue 32"', descripcion: 'Si te gusta el minimalismo...', img: producto18, categoria: 'sala' },
-  { id: 19, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto19, categoria: 'sala' },
+  { id: 19, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto19, categoria: 'habitación' },
+  { id: 20, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto20, categoria: 'habitación' },
+  { id: 21, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto21, categoria: 'habitación' },
+  { id: 22, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto22, categoria: 'habitación' },
+  { id: 25, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto25, categoria: 'habitación' },
+  { id: 26, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto26, categoria: 'habitación' },
+  { id: 27, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto27, categoria: 'habitación' },
+  { id: 28, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto28, categoria: 'habitación' },
+  { id: 29, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto29, categoria: 'habitación' },
+  { id: 30, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto30, categoria: 'habitación' },
+  { id: 31, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto31, categoria: 'habitación' },
+  { id: 32, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto32, categoria: 'habitación' },
+  { id: 33, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto33, categoria: 'habitación' },
+  { id: 34, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto34, categoria: 'habitación' },
+  { id: 35, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto35, categoria: 'habitación' },
+  { id: 36, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto36, categoria: 'habitación' },
+  { id: 37, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto37, categoria: 'habitación' },
+  { id: 38, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto38, categoria: 'habitación' },
+  { id: 39, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto39, categoria: 'habitación' },
+  { id: 40, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto40, categoria: 'habitación' },
+  { id: 41, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto41, categoria: 'habitación' },
+  { id: 42, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto42, categoria: 'habitación' },
+  { id: 43, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto43, categoria: 'habitación' },
+  { id: 44, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto44, categoria: 'estudio' },  
+  { id: 45, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto45, categoria: 'estudio' },
+  { id: 46, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto46, categoria: 'estudio' },
+  { id: 47, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto47, categoria: 'estudio' },
+  { id: 48, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto48, categoria: 'estudio' },
+  { id: 49, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto49, categoria: 'estudio' },
+  { id: 50, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto50, categoria: 'estudio' },
+  { id: 51, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto51, categoria: 'estudio' },
+  { id: 52, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto52, categoria: 'estudio' },
+  { id: 53, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto53, categoria: 'estudio' },
+  { id: 54, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto54, categoria: 'estudio' },
+  { id: 55, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto55, categoria: 'estudio' },
+  { id: 56, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto56, categoria: 'estudio' },
+  { id: 57, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto57, categoria: 'estudio' },
+  { id: 58, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto58, categoria: 'estudio' },
+  { id: 59, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto59, categoria: 'estudio' },
+  { id: 60, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto60, categoria: 'estudio' },
+  { id: 61, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto61, categoria: 'estudio' },
+  { id: 62, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto62, categoria: 'estudio' },
+  { id: 63, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto63, categoria: 'estudio' },
+  { id: 64, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto64, categoria: 'estudio' },
+  { id: 65, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto65, categoria: 'estudio' },
+  { id: 66, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto66, categoria: 'estudio' },
+  { id: 67, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto67, categoria: 'estudio' },
+  { id: 68, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto68, categoria: 'estudio' },
+  { id: 69, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto69, categoria: 'estudio' },
+  { id: 70, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto70, categoria: 'estudio' },
+  { id: 71, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto71, categoria: 'estudio' },
+  { id: 72, nombre: 'Mesa centro Urban', descripcion: 'Si te gusta el minimalismo...', img: producto72, categoria: 'estudio' },
 ];
 
-const categorias = ['zona gamer', 'habitación', 'sala', 'estudio', 'baño', 'cocina'];
+const categorias = ['zona gamer', 'habitación', 'sala', 'estudio'];
 
 const Productos = () => {
   const [expanded, setExpanded] = useState({});
@@ -212,6 +314,3 @@ const Productos = () => {
 };
 
 export default Productos;
-
-
-
