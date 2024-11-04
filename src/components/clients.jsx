@@ -3,24 +3,79 @@ import { Card, Col, Container, Row } from 'react-bootstrap';
 import cliente1 from '../assets/clientes/cliente1.jpeg';
 import cliente2 from '../assets/clientes/cliente2.jpeg';
 import cliente3 from '../assets/clientes/cliente3.jpeg';
+import cliente4 from '../assets/clientes/cliente4.jpeg';
+import cliente5 from '../assets/clientes/cliente5.jpeg';
+import cliente6 from '../assets/clientes/cliente6.jpeg';
+import cliente7 from '../assets/clientes/cliente7.jpeg';
+import cliente8 from '../assets/clientes/cliente8.jpeg';
+import cliente9 from '../assets/clientes/cliente9.jpeg';
+import cliente10 from '../assets/clientes/cliente10.jpeg';
+import cliente11 from '../assets/clientes/cliente11.jpeg';
+import cliente12 from '../assets/clientes/cliente12.jpeg';
+
 import fondo from '../assets/banner4.jpeg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const experiencias = [
   {
     id: 1,
-    texto: 'La entrega de la mesa de televisión fue excepcional. Nuestro equipo garantizó un transporte seguro y eficiente, logrando que el mueble llegara en perfectas condiciones al hogar del cliente en Cali...',
+    texto: 'Armado mesa de television Urban, solicitada por el cliente!',
     img: cliente1,
   },
   {
     id: 2,
-    texto: 'La instalación del centro de entretenimiento fue rápida y organizada. Nuestro equipo planificó cada paso del proceso, desde el transporte hasta la instalación...',
+    texto: 'Venta y armado del centro de entretenimiento Roni',
     img: cliente2,
   },
   {
     id: 3,
-    texto: 'La entrega y armado del armario de gran tamaño fueron impecables. El equipo de logística cuidó cada detalle para que el transporte fuera seguro...',
+    texto: 'Entrega de armado de closet 2x2 Burdeos',
     img: cliente3,
+  },
+  {
+    id: 4,
+    texto: 'Armado de armario de otro proveedor, el servicio de armado fue contratado gracias a nuestra excelente reputacion!',
+    img: cliente4,
+  },
+  {
+    id: 5,
+    texto: 'Venta e instalacion de escritorio configurable Spaqua',
+    img: cliente5,
+  },
+  {
+    id: 6,
+    texto: 'Armado de comoda Burdeos, solicitada por el cliente en la pos-venta',
+    img: cliente6,
+  },
+  {
+    id: 7,
+    texto: 'Una entrega mas con instalacion del centro de entretenimiento Roni',
+    img: cliente7,
+  },
+  {
+    id: 8,
+    texto: 'Muestra de el orden en el cual se entregan los productos, en su caja, con manual de usuario y garantia del fabricante',
+    img: cliente8,
+  },
+  {
+    id: 9,
+    texto: 'Entrega de venta y armado del escritorio Gamer Basic',
+    img: cliente9,
+  },
+  {
+    id: 10,
+    texto: 'Entrega del escritorio extensible Space, configuracion derecha',
+    img: cliente10,
+  },
+  {
+    id: 11,
+    texto: 'Armado en domicilio de Closet Bari de 2x2 mts',
+    img: cliente11,
+  },
+  {
+    id: 12,
+    texto: 'Domicilio garantizado en cali y alrededores, a todo el país por Inter Rapidisimo!',
+    img: cliente12,
   },
 ];
 
@@ -65,14 +120,14 @@ const Clientes = () => {
       }}>
         <h1>Clientes</h1>
       </div>
-      
+
       {/* Contenido */}
       <Container style={{ position: 'relative', zIndex: 2, marginTop: '20px' }}>
         <Row>
           {experiencias.map((experiencia) => (
             <Col md={4} key={experiencia.id} className="mb-4">
-              <Card style={{ borderRadius: '8px', overflow: 'hidden', boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.25)' }}>
-                <Card.Img variant="top" src={experiencia.img} alt={`Cliente ${experiencia.id}`} style={{ height: '250px', objectFit: 'cover' }} />
+              <Card style={{ borderRadius: '8px', overflow: 'hidden', boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.25)', height: '600px', width: '400px' }}>
+                <Card.Img variant="top" src={experiencia.img} alt={`Cliente ${experiencia.id}`} style={{ height: '500px', objectFit: 'cover' }} />
                 <Card.Body style={{ backgroundColor: '#333', color: 'white' }}>
                   <Card.Text style={{ textAlign: 'justify' }}>
                     {experiencia.texto}
@@ -88,6 +143,7 @@ const Clientes = () => {
 };
 
 export default Clientes;
+
 
 
 

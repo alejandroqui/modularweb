@@ -45,9 +45,9 @@ const FAQ = () => {
         <Container>
           <Accordion>
             <Accordion.Item eventKey="0">
-              <Accordion.Header>¿Cuánto tiempo tarda la entrega de los muebles modulares?</Accordion.Header>
+              <Accordion.Header>¿Cuánto tiempo tarda la entrega de los muebles modular?</Accordion.Header>
               <Accordion.Body>
-                La entrega de los muebles modulares suele tardar entre 5 y 10 días hábiles, dependiendo de la ubicación y disponibilidad de stock.
+                La entrega en la ciudad de cali es de maximo 2 dias, en el resto del país, maximo 5 dias hábiles.
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="1">
@@ -59,19 +59,19 @@ const FAQ = () => {
             <Accordion.Item eventKey="2">
               <Accordion.Header>¿Los muebles modulares tienen garantía?</Accordion.Header>
               <Accordion.Body>
-                Todos nuestros muebles modulares tienen una garantía de 1 año, cubriendo defectos de fabricación o problemas de instalación.
+                Todos nuestros muebles modulares tienen una garantía de 5 años en la madera, cubriendo defectos de fabricación o problemas de instalación.
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="3">
-              <Accordion.Header>¿Es posible personalizar los muebles modulares?</Accordion.Header>
+              <Accordion.Header>¿Cuentan con servicio contra-entrega?</Accordion.Header>
               <Accordion.Body>
-                Sí, ofrecemos opciones de personalización en color, tamaño y configuración para adaptarse mejor a tus necesidades.
+                Sí, ofrecemos servicio contra-entrega en todo el país
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="4">
               <Accordion.Header>¿Cuál es el proceso de compra?</Accordion.Header>
               <Accordion.Body>
-                Puedes realizar la compra directamente en nuestra página web o contactar a nuestro equipo de ventas para asistencia personalizada.
+                Puedes realizar la compra directamente por nuestros canales de marketplace, whatsapp, instagram o en nuestra tienda virtual! .
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
