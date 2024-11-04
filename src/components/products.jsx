@@ -102,6 +102,9 @@ const Productos = () => {
                           <Card.Text style={{ fontSize: '0.9rem', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>
                             {producto.descripcion}
                           </Card.Text>
+                          <Card.Text style={{ fontSize: '0.9rem', marginTop: '5px' }}>
+                            Precio: {producto.precio} {/* Precio con el mismo tamaño de fuente que la descripción */}
+                          </Card.Text>
                         </Card.Body>
                       </Card>
                     </Col>
@@ -133,7 +136,7 @@ const Productos = () => {
         </div>
       </div>
 
-      <Modal show={showModal} onHide={handleCloseModal} size="lg" centered>
+      <Modal show={showModal} onHide={handleCloseModal} size="xl" centered>
         <Modal.Header closeButton>
           <Modal.Title>{selectedProducto?.nombre}</Modal.Title>
         </Modal.Header>
@@ -143,13 +146,14 @@ const Productos = () => {
               <div style={{ paddingRight: '20px' }}>
                 <h4>Descripción</h4>
                 <p>{selectedProducto?.descripcion}</p>
+                <p style={{ fontSize: '0.9rem', fontWeight: 'bold' }}>Precio: {selectedProducto?.precio}</p> {/* Precio con el mismo tamaño de fuente en el modal */}
               </div>
             </Col>
             <Col md={6}>
               <img 
                 src={selectedProducto?.img} 
                 alt={selectedProducto?.nombre} 
-                style={{ width: '100%', objectFit: 'cover', borderRadius: '5px' }} 
+                style={{ width: '100%', height: '500px', objectFit: 'cover', borderRadius: '5px' }} 
               />
             </Col>
           </Row>
