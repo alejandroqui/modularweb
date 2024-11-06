@@ -1,3 +1,4 @@
+// src/components/Productos.jsx
 import React, { useState } from 'react';
 import { Card, Row, Col, Button, Modal } from 'react-bootstrap';
 import { productos, categorias, fondoImagen } from './productsData';
@@ -60,6 +61,7 @@ const Productos = () => {
           color: 'white',
           fontSize: '2rem',
           marginTop: '-20px',
+          textAlign: 'center',
         }}>
           <h1>Productos</h1>
         </div>
@@ -73,7 +75,8 @@ const Productos = () => {
               border: 'none',
               padding: '12px 24px',
               fontSize: '1.1rem',
-              width: '250px',
+              width: '100%',
+              maxWidth: '250px',
               height: '70px',
               borderRadius: '20%',
             }}
@@ -94,16 +97,16 @@ const Productos = () => {
                 <h2 style={{ color: 'white', fontSize: '1.8rem', textTransform: 'capitalize' }}>{categoria}</h2>
                 <Row>
                   {productosVisibles.map((producto) => (
-                    <Col key={producto.id} md={4} className="mb-4">
-                      <Card onClick={() => handleCardClick(producto)} style={{ width: '600px', height: '400px', margin: 'auto', cursor: 'pointer' }}>
-                        <Card.Img variant="top" src={producto.img} style={{ height: '300px', objectFit: 'cover' }} />
+                    <Col key={producto.id} xs={12} sm={6} md={4} className="mb-4">
+                      <Card onClick={() => handleCardClick(producto)} style={{ cursor: 'pointer' }}>
+                        <Card.Img variant="top" src={producto.img} style={{ height: '200px', objectFit: 'cover' }} />
                         <Card.Body style={{ padding: '10px' }}>
                           <Card.Title style={{ fontSize: '1.25rem', marginBottom: '5px' }}>{producto.nombre}</Card.Title>
                           <Card.Text style={{ fontSize: '0.9rem', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>
                             {producto.descripcion}
                           </Card.Text>
                           <Card.Text style={{ fontSize: '0.9rem', marginTop: '5px' }}>
-                            Precio: {producto.precio} {/* Precio con el mismo tamaño de fuente que la descripción */}
+                            Precio: {producto.precio}
                           </Card.Text>
                         </Card.Body>
                       </Card>
@@ -120,8 +123,9 @@ const Productos = () => {
                         backgroundColor: '#595656',
                         border: 'none',
                         padding: '12px 24px',
-                        fontSize: '1.1rem',
-                        width: '200px',
+                        fontSize: '1rem',
+                        width: '100%',
+                        maxWidth: '200px',
                         height: '50px',
                         borderRadius: '0',
                       }}
@@ -136,24 +140,24 @@ const Productos = () => {
         </div>
       </div>
 
-      <Modal show={showModal} onHide={handleCloseModal} size="xl" centered>
+      <Modal show={showModal} onHide={handleCloseModal} size="lg" centered>
         <Modal.Header closeButton>
           <Modal.Title>{selectedProducto?.nombre}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Row>
-            <Col md={6}>
+            <Col xs={12} md={6}>
               <div style={{ paddingRight: '20px' }}>
                 <h4>Descripción</h4>
                 <p>{selectedProducto?.descripcion}</p>
-                <p style={{ fontSize: '0.9rem', fontWeight: 'bold' }}>Precio: {selectedProducto?.precio}</p> {/* Precio con el mismo tamaño de fuente en el modal */}
+                <p style={{ fontSize: '0.9rem', fontWeight: 'bold' }}>Precio: {selectedProducto?.precio}</p>
               </div>
             </Col>
-            <Col md={6}>
+            <Col xs={12} md={6}>
               <img 
                 src={selectedProducto?.img} 
                 alt={selectedProducto?.nombre} 
-                style={{ width: '100%', height: '500px', objectFit: 'cover', borderRadius: '5px' }} 
+                style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '5px' }} 
               />
             </Col>
           </Row>

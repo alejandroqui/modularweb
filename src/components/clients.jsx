@@ -1,3 +1,4 @@
+// src/components/Clientes.jsx
 import React from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 import cliente1 from '../assets/clientes/cliente1.jpeg';
@@ -17,66 +18,19 @@ import fondo from '../assets/banner4.jpeg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const experiencias = [
-  {
-    id: 1,
-    texto: 'Armado mesa de television Urban, solicitada por el cliente!',
-    img: cliente1,
-  },
-  {
-    id: 2,
-    texto: 'Venta y armado del centro de entretenimiento Roni',
-    img: cliente2,
-  },
-  {
-    id: 3,
-    texto: 'Entrega de armado de closet 2x2 Burdeos',
-    img: cliente3,
-  },
-  {
-    id: 4,
-    texto: 'Armado de armario de otro proveedor, el servicio de armado fue contratado gracias a nuestra excelente reputacion!',
-    img: cliente4,
-  },
-  {
-    id: 5,
-    texto: 'Venta e instalacion de escritorio configurable Spaqua',
-    img: cliente5,
-  },
-  {
-    id: 6,
-    texto: 'Armado de comoda Burdeos, solicitada por el cliente en la pos-venta',
-    img: cliente6,
-  },
-  {
-    id: 7,
-    texto: 'Una entrega mas con instalacion del centro de entretenimiento Roni',
-    img: cliente7,
-  },
-  {
-    id: 8,
-    texto: 'Muestra de el orden en el cual se entregan los productos, en su caja, con manual de usuario y garantia del fabricante',
-    img: cliente8,
-  },
-  {
-    id: 9,
-    texto: 'Entrega de venta y armado del escritorio Gamer Basic',
-    img: cliente9,
-  },
-  {
-    id: 10,
-    texto: 'Entrega del escritorio extensible Space, configuracion derecha',
-    img: cliente10,
-  },
-  {
-    id: 11,
-    texto: 'Armado en domicilio de Closet Bari de 2x2 mts',
-    img: cliente11,
-  },
-  {
-    id: 12,
-    texto: 'Domicilio garantizado en cali y alrededores, a todo el país por Inter Rapidisimo!',
-    img: cliente12,
-  },
+  // Datos de experiencias
+  { id: 1, texto: 'Armado mesa de televisión Urban, solicitada por el cliente!', img: cliente1 },
+  { id: 2, texto: 'Venta y armado del centro de entretenimiento Roni', img: cliente2 },
+  { id: 3, texto: 'Entrega de armado de closet 2x2 Burdeos', img: cliente3 },
+  { id: 4, texto: 'Armado de armario de otro proveedor, el servicio de armado fue contratado gracias a nuestra excelente reputación!', img: cliente4 },
+  { id: 5, texto: 'Venta e instalación de escritorio configurable Spaqua', img: cliente5 },
+  { id: 6, texto: 'Armado de cómoda Burdeos, solicitada por el cliente en la pos-venta', img: cliente6 },
+  { id: 7, texto: 'Una entrega más con instalación del centro de entretenimiento Roni', img: cliente7 },
+  { id: 8, texto: 'Muestra del orden en que se entregan los productos: caja, manual y garantía del fabricante', img: cliente8 },
+  { id: 9, texto: 'Entrega de venta y armado del escritorio Gamer Basic', img: cliente9 },
+  { id: 10, texto: 'Entrega del escritorio extensible Space, configuración derecha', img: cliente10 },
+  { id: 11, texto: 'Armado en domicilio de Closet Bari de 2x2 mts', img: cliente11 },
+  { id: 12, texto: 'Domicilio garantizado en Cali y alrededores, a todo el país por Inter Rapidísimo!', img: cliente12 },
 ];
 
 const Clientes = () => {
@@ -103,33 +57,46 @@ const Clientes = () => {
         zIndex: 1,
       }} />
 
-      {/* Franja negra con el título "Clientes" a ancho completo */}
+      {/* Franja negra con el título "Clientes" */}
       <div style={{
         backgroundColor: '#595656',
-        height: '100px',
+        height: '80px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         color: 'white',
-        fontSize: '2rem',
+        fontSize: '1.8rem',
         width: '100vw',
         marginLeft: 'calc(-50vw + 50%)',
-        marginTop: '-50px',  // Ajuste para elevar la franja
+        marginTop: '-40px',
         position: 'relative',
         zIndex: 2,
+        textAlign: 'center',
       }}>
-        <h1>Clientes</h1>
+        <h1 style={{ margin: 0 }}>Clientes</h1>
       </div>
 
       {/* Contenido */}
       <Container style={{ position: 'relative', zIndex: 2, marginTop: '20px' }}>
         <Row>
           {experiencias.map((experiencia) => (
-            <Col md={4} key={experiencia.id} className="mb-4">
-              <Card style={{ borderRadius: '8px', overflow: 'hidden', boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.25)', height: '600px', width: '400px' }}>
-                <Card.Img variant="top" src={experiencia.img} alt={`Cliente ${experiencia.id}`} style={{ height: '500px', objectFit: 'cover' }} />
-                <Card.Body style={{ backgroundColor: '#333', color: 'white' }}>
-                  <Card.Text style={{ textAlign: 'justify' }}>
+            <Col xs={12} sm={6} md={4} key={experiencia.id} className="mb-4">
+              <Card style={{
+                borderRadius: '8px',
+                overflow: 'hidden',
+                boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.25)',
+                height: '100%',
+                maxWidth: '100%',
+                margin: 'auto',
+              }}>
+                <Card.Img
+                  variant="top"
+                  src={experiencia.img}
+                  alt={`Cliente ${experiencia.id}`}
+                  style={{ height: '300px', objectFit: 'cover' }}
+                />
+                <Card.Body style={{ backgroundColor: '#333', color: 'white', padding: '15px' }}>
+                  <Card.Text style={{ textAlign: 'justify', fontSize: '0.9rem' }}>
                     {experiencia.texto}
                   </Card.Text>
                 </Card.Body>
@@ -143,6 +110,7 @@ const Clientes = () => {
 };
 
 export default Clientes;
+
 
 
 

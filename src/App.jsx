@@ -8,19 +8,22 @@ import Us from './components/us';
 import FAQ from './components/faq';
 import ContactUs from './components/contactUs';
 import Footer from './components/footer';
+import { Container } from 'react-bootstrap';
 
 const App = () => {
   return (
-    <div style={{ marginTop: '150px' }}> {/* Ajusta el margen superior según la altura del footer */}
+    <Container fluid className="p-0">
       <MyNavbar />
-      <Banner />
-      <Products />
-      <Clients />
-      <Us />
-      <FAQ />
-      <ContactUs />
-      <Footer />
-    </div>
+      <div style={{ marginTop: '100px' }}> {/* Ajuste de margen superior para móviles */}
+        <Banner />
+        <Products />
+        <Clients />
+        <Us />
+        <FAQ />
+        <ContactUs />
+        <Footer />
+      </div>
+    </Container>
   );
 };
 

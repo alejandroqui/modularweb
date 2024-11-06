@@ -1,3 +1,4 @@
+// src/components/FAQ.jsx
 import React from 'react';
 import { Accordion, Container } from 'react-bootstrap';
 import fondo from '../assets/banner2.jpeg';
@@ -21,7 +22,7 @@ const FAQ = () => {
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundColor: 'rgba(0, 0, 0, 0.7)', // Aumenta la transparencia
+        backgroundColor: 'rgba(0, 0, 0, 0.7)',
         zIndex: 1,
       }} />
 
@@ -30,24 +31,25 @@ const FAQ = () => {
         {/* Header */}
         <div style={{
           backgroundColor: '#595656',
-          height: '100px',
+          height: '80px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           color: 'white',
-          fontSize: '2rem',
+          fontSize: '1.8rem',
+          textAlign: 'center',
+          marginBottom: '20px',
         }}>
-          <h1>Preguntas Frecuentes</h1>
+          <h1 style={{ margin: 0 }}>Preguntas Frecuentes</h1>
         </div>
 
         {/* FAQ Section */}
-        <br />
-        <Container>
+        <Container style={{ padding: '0 20px', maxWidth: '800px' }}>
           <Accordion>
             <Accordion.Item eventKey="0">
               <Accordion.Header>¿Cuánto tiempo tarda la entrega de los muebles modular?</Accordion.Header>
               <Accordion.Body>
-                La entrega en la ciudad de cali es de maximo 2 dias, en el resto del país, maximo 5 dias hábiles.
+                La entrega en la ciudad de Cali es de máximo 2 días, y en el resto del país, máximo 5 días hábiles.
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="1">
@@ -65,19 +67,17 @@ const FAQ = () => {
             <Accordion.Item eventKey="3">
               <Accordion.Header>¿Cuentan con servicio contra-entrega?</Accordion.Header>
               <Accordion.Body>
-                Sí, ofrecemos servicio contra-entrega en todo el país
+                Sí, ofrecemos servicio contra-entrega en todo el país.
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="4">
               <Accordion.Header>¿Cuál es el proceso de compra?</Accordion.Header>
               <Accordion.Body>
-                Puedes realizar la compra directamente por nuestros canales de marketplace, whatsapp, instagram o en nuestra tienda virtual! .
+                Puedes realizar la compra directamente por nuestros canales de marketplace, WhatsApp, Instagram o en nuestra tienda virtual.
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
         </Container>
-        <br />
-        <br />
         <br />
       </div>
     </div>
@@ -85,3 +85,4 @@ const FAQ = () => {
 };
 
 export default FAQ;
+

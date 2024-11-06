@@ -1,8 +1,9 @@
+// src/components/Nosotros.jsx
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import ceoFoto from '../assets/ceo.jpeg'; // Asegúrate de tener una foto del CEO en esta ruta
-import logo from '../assets/modular_black.jpeg'; // Asegúrate de tener el logo en esta ruta
-import fondo from '../assets/banner3.jpeg'; // Imagen de fondo
+import ceoFoto from '../assets/ceo.jpeg';
+import logo from '../assets/modular_black.jpeg';
+import fondo from '../assets/banner3.jpeg';
 
 const Nosotros = () => {
   return (
@@ -23,41 +24,47 @@ const Nosotros = () => {
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundColor: 'rgba(0, 0, 0, 0.7)', // Aumenta la transparencia
+        backgroundColor: 'rgba(0, 0, 0, 0.7)',
         zIndex: 1,
       }} />
 
       {/* Contenido */}
       <div style={{ position: 'relative', zIndex: 2 }}>
-        {/* Estilo para el título, ocupando todo el ancho */}
+        {/* Título */}
         <div style={{
           backgroundColor: '#595656',
-          height: '100px',
+          height: '80px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           color: 'white',
-          fontSize: '2rem',
-          marginBottom: '40px',
-          width: '100%', // Ocupar todo el ancho de la pantalla
+          fontSize: '1.8rem',
+          marginBottom: '30px',
+          width: '100%',
+          textAlign: 'center',
         }}>
-          <h1>Nosotros</h1>
+          <h1 style={{ margin: 0 }}>Nosotros</h1>
         </div>
 
         <Container id="nosotros" style={{ padding: '0 20px' }}>
           <Row className="justify-content-center">
-            <Col md={8}>
+            <Col xs={12} md={8}>
               <Row>
-                <Col md={6}>
-                  <Card style={{ borderRadius: '10px', height: '600px', display: 'flex', flexDirection: 'column' }}>
+                <Col xs={12} md={6} className="mb-4">
+                  <Card style={{ borderRadius: '10px', height: '100%', display: 'flex', flexDirection: 'column' }}>
                     <Card.Img
                       variant="top"
                       src={ceoFoto}
-                      style={{ borderRadius: '10px 10px 0 0', objectFit: 'cover', height: '50%', width: '100%' }}
+                      style={{
+                        borderRadius: '10px 10px 0 0',
+                        objectFit: 'cover',
+                        height: '300px',
+                        width: '100%',
+                      }}
                     />
-                    <Card.Body style={{ height: '50%', display: 'flex', flexDirection: 'column' }}>
+                    <Card.Body style={{ display: 'flex', flexDirection: 'column', padding: '20px' }}>
                       <Card.Title style={{ fontSize: '1.5rem' }}>Nuestros CEO</Card.Title>
-                      <Card.Text style={{ fontSize: '1rem', flex: 1 }}>
+                      <Card.Text style={{ fontSize: '1rem', flex: 1, textAlign: 'justify' }}>
                         Nuestros CEO han liderado la venta de muebles modulares desde 2020,
                         innovando y ofreciendo productos funcionales y estéticamente agradables.
                         <br /><br />
@@ -67,17 +74,24 @@ const Nosotros = () => {
                     </Card.Body>
                   </Card>
                 </Col>
-                <Col md={6}>
-                  <Card style={{ borderRadius: '10px', height: '600px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <Col xs={12} md={6} className="mb-4">
+                  <Card style={{
+                    borderRadius: '10px',
+                    height: '100%',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    padding: '20px',
+                  }}>
                     <img
                       src={logo}
                       alt="Logo"
                       style={{
-                        borderRadius: '50%', // Bordes totalmente redondos
-                        width: '300px', // Aumentar tamaño del logo
-                        height: '300px', // Aumentar tamaño del logo
+                        borderRadius: '50%',
+                        width: '250px',
+                        height: '250px',
                         objectFit: 'cover',
-                        border: '2px solid #595656', // Añadir un borde si lo deseas
+                        border: '2px solid #595656',
                       }}
                     />
                   </Card>
@@ -87,14 +101,13 @@ const Nosotros = () => {
           </Row>
         </Container>
         <br />
-        <br />
-        <br />
       </div>
     </div>
   );
 };
 
 export default Nosotros;
+
 
 
 

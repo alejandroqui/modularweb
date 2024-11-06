@@ -1,3 +1,4 @@
+// src/components/Contactanos.jsx
 import React, { useState } from 'react';
 import { Form, Button, Container } from 'react-bootstrap';
 import emailjs from 'emailjs-com';
@@ -19,7 +20,6 @@ const Contactanos = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validar que todos los campos son obligatorios
     if (!formData.nombre || !formData.email || !formData.telefono || !formData.mensaje) {
       alert('Por favor, completa todos los campos obligatorios.');
       return;
@@ -27,10 +27,10 @@ const Contactanos = () => {
 
     emailjs
       .send(
-        'service_0x8piqp', // Reemplaza con tu Service ID
-        'tamplate_modular', // Reemplaza con tu Template ID
+        'service_0x8piqp',
+        'tamplate_modular',
         formData,
-        'm-Iue2hNH0SNnZdmt' // Reemplaza con tu User ID
+        'm-Iue2hNH0SNnZdmt'
       )
       .then(
         (result) => {
@@ -62,7 +62,7 @@ const Contactanos = () => {
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundColor: 'rgba(0, 0, 0, 0.7)', // Ajusta el nivel de opacidad
+        backgroundColor: 'rgba(0, 0, 0, 0.7)',
         zIndex: 1,
       }} />
 
@@ -71,21 +71,22 @@ const Contactanos = () => {
         {/* Header */}
         <div style={{
           backgroundColor: '#595656',
-          height: '100px',
+          height: '80px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           color: 'white',
-          fontSize: '2rem',
+          fontSize: '1.8rem',
+          textAlign: 'center',
+          marginBottom: '20px',
         }}>
-          <h1>Contactanos</h1>
+          <h1 style={{ margin: 0 }}>Contáctanos</h1>
         </div>
 
         {/* Formulario de Contacto */}
-        <br />
-        <Container>
+        <Container style={{ padding: '0 20px', maxWidth: '600px' }}>
           <Form onSubmit={handleSubmit}>
-            <Form.Group controlId="nombre">
+            <Form.Group controlId="nombre" style={{ marginBottom: '15px' }}>
               <Form.Label style={{ color: 'white' }}>Nombre</Form.Label>
               <Form.Control
                 type="text"
@@ -93,11 +94,11 @@ const Contactanos = () => {
                 value={formData.nombre}
                 onChange={handleChange}
                 required
-                style={{ backgroundColor: 'white', color: '#595656' }} // Fondo blanco, texto en gris oscuro
+                style={{ backgroundColor: 'white', color: '#595656' }}
               />
             </Form.Group>
 
-            <Form.Group controlId="email">
+            <Form.Group controlId="email" style={{ marginBottom: '15px' }}>
               <Form.Label style={{ color: 'white' }}>Email</Form.Label>
               <Form.Control
                 type="email"
@@ -105,11 +106,11 @@ const Contactanos = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                style={{ backgroundColor: 'white', color: '#595656' }} // Fondo blanco, texto en gris oscuro
+                style={{ backgroundColor: 'white', color: '#595656' }}
               />
             </Form.Group>
 
-            <Form.Group controlId="telefono">
+            <Form.Group controlId="telefono" style={{ marginBottom: '15px' }}>
               <Form.Label style={{ color: 'white' }}>Teléfono</Form.Label>
               <Form.Control
                 type="tel"
@@ -117,11 +118,11 @@ const Contactanos = () => {
                 value={formData.telefono}
                 onChange={handleChange}
                 required
-                style={{ backgroundColor: 'white', color: '#595656' }} // Fondo blanco, texto en gris oscuro
+                style={{ backgroundColor: 'white', color: '#595656' }}
               />
             </Form.Group>
 
-            <Form.Group controlId="mensaje">
+            <Form.Group controlId="mensaje" style={{ marginBottom: '15px' }}>
               <Form.Label style={{ color: 'white' }}>Mensaje</Form.Label>
               <Form.Control
                 as="textarea"
@@ -130,30 +131,31 @@ const Contactanos = () => {
                 value={formData.mensaje}
                 onChange={handleChange}
                 required
-                style={{ backgroundColor: 'white', color: '#595656' }} // Fondo blanco, texto en gris oscuro
+                style={{ backgroundColor: 'white', color: '#595656' }}
               />
             </Form.Group>
 
-            {/* Botón Enviar con nuevos estilos */}
-            <Button
-              variant="primary"
-              type="submit"
-              style={{
-                backgroundColor: '#595656',
-                border: 'none',
-                padding: '12px 24px',
-                fontSize: '1.1rem',
-                width: '200px',
-                height: '50px',
-                borderRadius: '0',
-                marginTop: '20px', // Espacio superior
-              }}
-            >
-              Enviar
-            </Button>
+            {/* Botón Enviar con estilos responsivos */}
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <Button
+                variant="primary"
+                type="submit"
+                style={{
+                  backgroundColor: '#595656',
+                  border: 'none',
+                  padding: '12px 24px',
+                  fontSize: '1rem',
+                  width: '100%',
+                  maxWidth: '200px',
+                  height: '50px',
+                  borderRadius: '0',
+                }}
+              >
+                Enviar
+              </Button>
+            </div>
           </Form>
         </Container>
-        <br />
         <br />
       </div>
     </div>
@@ -161,6 +163,7 @@ const Contactanos = () => {
 };
 
 export default Contactanos;
+
 
 
 

@@ -1,5 +1,6 @@
+// src/components/banner.jsx
 import React from 'react';
-import { Carousel } from 'react-bootstrap';
+import { Carousel, Row, Col, Container } from 'react-bootstrap';
 import img1 from '../assets/banner3.jpeg'; 
 import img2 from '../assets/banner1.jpeg';
 import img3 from '../assets/banner5.jpeg';
@@ -26,74 +27,81 @@ const images = [
   { src: img7, alt: "Séptima imagen del banner" },
   { src: img8, alt: "Octava imagen del banner" },
   { src: img9, alt: "Novena imagen del banner" },
-  { src: img10, alt: "Decima imagen del banner" },
-  { src: img11, alt: "Undecima imagen del banner" },
-  { src: img12, alt: "Duodecima imagen del banner" },
-  { src: img13, alt: "Treceava imagen del banner" },
-  { src: img14, alt: "Catorceava imagen del banner" },
-  { src: img15, alt: "Quinceava imagen del banner" },
+  { src: img10, alt: "Décima imagen del banner" },
+  { src: img11, alt: "Undécima imagen del banner" },
+  { src: img12, alt: "Duodécima imagen del banner" },
+  { src: img13, alt: "Decimotercera imagen del banner" },
+  { src: img14, alt: "Decimocuarta imagen del banner" },
+  { src: img15, alt: "Decimoquinta imagen del banner" },
 ];
 
 const Banner = () => {
-  const triplets = [];
-  for (let i = 0; i < images.length; i += 3) {
-    triplets.push(images.slice(i, i + 3));
-  }
-
   return (
-    <div id="banner" style={{ marginTop: '150px' }}> 
-      {/* Banner de imágenes en carrusel */}
-      <Carousel style={{ width: '100%' }}>
-        {triplets.map((triplet, index) => (
-          <Carousel.Item key={index}>
-            <div style={{ display: 'flex', width: '100%', padding: '0' }}>
-              {triplet.map((image, idx) => (
-                <div key={idx} style={{ flex: 1, padding: '0' }}> {/* Se eliminan márgenes */}
-                  <img
-                    className="d-block w-100"
-                    src={image.src}
-                    alt={image.alt}
-                    style={{ height: '600px', objectFit: 'cover', margin: '0', padding: '0' }} // Ajuste completo de imagen sin márgenes
-                  />
-                </div>
-              ))}
-            </div>
+    <div id="banner" className="mt-4 mt-md-5"> {/* Ajusta el margen superior solo en pantallas grandes */}
+      <Carousel className="w-100">
+        {images.map((image, idx) => (
+          <Carousel.Item key={idx}>
+            <img
+              className="d-block w-100"
+              src={image.src}
+              alt={image.alt}
+              style={{
+                height: '400px', // Altura de la imagen en pantallas grandes
+                objectFit: 'cover', // Asegura que la imagen cubra el área sin perder proporción
+              }}
+            />
           </Carousel.Item>
         ))}
       </Carousel>
 
       {/* Descripción de productos y servicios en tarjetas */}
-      <div style={{ padding: '20px', backgroundColor: '#f8f9fa' }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '20px', color: '#595656' }}>Descubre nuestros productos y servicios</h2>
-        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+      <Container fluid className="py-4 bg-light">
+        <h2 className="text-center mb-4 text-secondary">Descubre nuestros productos y servicios</h2>
+        <Row>
           {/* Tarjeta: Productos */}
-          <div style={{ flex: 1, margin: '10px', padding: '20px', backgroundColor: 'white', borderRadius: '10px', boxShadow: '0 2px 5px rgba(0,0,0,0.1)' }}>
-            <h2 style={{ color: '#595656' }}>Productos</h2>
-            <ul style={{ fontSize: '18px', lineHeight: '1.8', color: '#595656' }}>
-              <li>Escritorios modulares sencillos, tipo L y gamer.</li>
-              <li>Armarios y cajoneras de diferentes tamaños y estilos.</li>
-              <li>Camas modulares y base camas.</li>
-              <li>Centros de entretenimiento y mesas de televisor.</li>
-            </ul>
-          </div>
+          <Col xs={12} md={6} className="mb-4">
+            <div className="p-4 bg-white rounded shadow-sm">
+              <h3 className="text-secondary">Productos</h3>
+              <ul className="list-unstyled text-muted">
+                <li>Escritorios modulares sencillos, tipo L y gamer.</li>
+                <li>Armarios y cajoneras de diferentes tamaños y estilos.</li>
+                <li>Camas modulares y base camas.</li>
+                <li>Centros de entretenimiento y mesas de televisor.</li>
+              </ul>
+            </div>
+          </Col>
 
           {/* Tarjeta: Servicios */}
-          <div style={{ flex: 1, margin: '10px', padding: '20px', backgroundColor: 'white', borderRadius: '10px', boxShadow: '0 2px 5px rgba(0,0,0,0.1)' }}>
-            <h2 style={{ color: '#595656' }}>Servicios</h2>
-            <ul style={{ fontSize: '18px', lineHeight: '1.8', color: '#595656' }}>
-              <li>Asesoría en diseño de interiores para optimizar tus espacios.</li>
-              <li>Instalación de muebles.</li>
-              <li>Opciones de financiamiento para adaptarse a tu presupuesto.</li>
-              <li>Garantía de calidad y servicio postventa.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+          <Col xs={12} md={6} className="mb-4">
+            <div className="p-4 bg-white rounded shadow-sm">
+              <h3 className="text-secondary">Servicios</h3>
+              <ul className="list-unstyled text-muted">
+                <li>Asesoría en diseño de interiores para optimizar tus espacios.</li>
+                <li>Instalación de muebles.</li>
+                <li>Opciones de financiamiento para adaptarse a tu presupuesto.</li>
+                <li>Garantía de calidad y servicio postventa.</li>
+              </ul>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+
+      {/* Estilos adicionales para pantallas grandes */}
+      <style>{`
+        @media (min-width: 768px) {
+          #banner .carousel img {
+            height: 300px; /* Ajusta la altura de la imagen en pantallas grandes */
+          }
+        }
+      `}</style>
     </div>
   );
 };
 
 export default Banner;
+
+
+
 
 
 
