@@ -68,7 +68,7 @@ const Clientes = () => {
         fontSize: '1.8rem',
         width: '100vw',
         marginLeft: 'calc(-50vw + 50%)',
-        marginTop: '-40px',
+        marginTop: '-50px',
         position: 'relative',
         zIndex: 2,
         textAlign: 'center',

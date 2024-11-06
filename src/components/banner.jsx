@@ -1,4 +1,3 @@
-// src/components/banner.jsx
 import React from 'react';
 import { Carousel, Row, Col, Container } from 'react-bootstrap';
 import img1 from '../assets/banner3.jpeg'; 
@@ -37,28 +36,27 @@ const images = [
 
 const Banner = () => {
   return (
-    <div id="banner" className="mt-4 mt-md-5"> {/* Ajusta el margen superior solo en pantallas grandes */}
+    <div id="banner" className="mt-4 mt-md-5">
       <Carousel className="w-100">
         {images.map((image, idx) => (
           <Carousel.Item key={idx}>
             <img
-              className="d-block w-100"
+              className="d-block w-100 banner-image"
               src={image.src}
               alt={image.alt}
               style={{
-                height: '400px', // Altura de la imagen en pantallas grandes
-                objectFit: 'cover', // Asegura que la imagen cubra el área sin perder proporción
+                objectFit: 'cover',
+                width: '100%', // Asegura que la imagen ocupe todo el ancho en móviles
+                height: 'auto', // Mantiene la proporción de la imagen
               }}
             />
           </Carousel.Item>
         ))}
       </Carousel>
 
-      {/* Descripción de productos y servicios en tarjetas */}
       <Container fluid className="py-4 bg-light">
         <h2 className="text-center mb-4 text-secondary">Descubre nuestros productos y servicios</h2>
         <Row>
-          {/* Tarjeta: Productos */}
           <Col xs={12} md={6} className="mb-4">
             <div className="p-4 bg-white rounded shadow-sm">
               <h3 className="text-secondary">Productos</h3>
@@ -70,8 +68,6 @@ const Banner = () => {
               </ul>
             </div>
           </Col>
-
-          {/* Tarjeta: Servicios */}
           <Col xs={12} md={6} className="mb-4">
             <div className="p-4 bg-white rounded shadow-sm">
               <h3 className="text-secondary">Servicios</h3>
@@ -86,11 +82,19 @@ const Banner = () => {
         </Row>
       </Container>
 
-      {/* Estilos adicionales para pantallas grandes */}
       <style>{`
+        /* Estilo para imágenes en pantallas pequeñas (móviles) */
+        .banner-image {
+          height: 250px; /* Altura para pantallas pequeñas */
+        }
+
+        /* Estilo para pantallas más grandes */
         @media (min-width: 768px) {
-          #banner .carousel img {
-            height: 300px; /* Ajusta la altura de la imagen en pantallas grandes */
+          .banner-image {
+            max-height: 400px; /* Limita la altura máxima en pantallas grandes */
+            width: 80%; /* Hace que la imagen sea más angosta en pantallas grandes */
+            margin-left: auto;
+            margin-right: auto;
           }
         }
       `}</style>
@@ -99,6 +103,17 @@ const Banner = () => {
 };
 
 export default Banner;
+
+
+
+
+
+
+
+
+
+
+
 
 
 
