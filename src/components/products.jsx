@@ -54,7 +54,7 @@ const Productos = () => {
       <div style={{ position: 'relative', zIndex: 2 }}>
         <div style={{
           backgroundColor: '#595656',
-          height: '100px',
+          height: '60px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -66,6 +66,7 @@ const Productos = () => {
           <h1>Productos</h1>
         </div>
 
+        {/* Botón Desplegar Catálogo centrado */}
         <div style={{ textAlign: 'center', margin: '20px 0' }}>
           <Button
             variant="primary"
@@ -78,7 +79,7 @@ const Productos = () => {
               width: '100%',
               maxWidth: '250px',
               height: '70px',
-              borderRadius: '20%',
+              borderRadius: '0%',
             }}
           >
             {mostrarTodasCategorias ? 'Mostrar menos' : 'Desplegar Catálogo'}
@@ -97,7 +98,7 @@ const Productos = () => {
                 <h2 style={{ color: 'white', fontSize: '1.8rem', textTransform: 'capitalize' }}>{categoria}</h2>
                 <Row>
                   {productosVisibles.map((producto) => (
-                    <Col key={producto.id} xs={12} sm={6} md={4} className="mb-4">
+                    <Col key={producto.id} xs={6} sm={6} md={4} className="mb-4">
                       <Card onClick={() => handleCardClick(producto)} style={{ cursor: 'pointer' }}>
                         <Card.Img variant="top" src={producto.img} style={{ height: '200px', objectFit: 'cover' }} />
                         <Card.Body style={{ padding: '10px' }}>
@@ -114,8 +115,9 @@ const Productos = () => {
                   ))}
                 </Row>
 
+                {/* Botón Mostrar más a la izquierda */}
                 {productosCategoria.length > 3 && (
-                  <div style={{ textAlign: 'center', marginTop: '10px' }}>
+                  <div style={{ textAlign: 'left', marginTop: '10px' }}>
                     <Button
                       variant="primary"
                       onClick={() => toggleExpanded(categoria)}
@@ -168,6 +170,9 @@ const Productos = () => {
 };
 
 export default Productos;
+
+
+
 
 
 

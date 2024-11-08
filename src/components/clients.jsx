@@ -1,6 +1,6 @@
 // src/components/Clientes.jsx
-import React from 'react';
-import { Card, Col, Container, Row } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Card, Col, Container, Row, Button } from 'react-bootstrap';
 import cliente1 from '../assets/clientes/cliente1.jpeg';
 import cliente2 from '../assets/clientes/cliente2.jpeg';
 import cliente3 from '../assets/clientes/cliente3.jpeg';
@@ -18,7 +18,6 @@ import fondo from '../assets/banner4.jpeg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const experiencias = [
-  // Datos de experiencias
   { id: 1, texto: 'Armado mesa de televisión Urban, solicitada por el cliente!', img: cliente1 },
   { id: 2, texto: 'Venta y armado del centro de entretenimiento Roni', img: cliente2 },
   { id: 3, texto: 'Entrega de armado de closet 2x2 Burdeos', img: cliente3 },
@@ -34,6 +33,14 @@ const experiencias = [
 ];
 
 const Clientes = () => {
+  const [mostrarMas, setMostrarMas] = useState(false); // Estado para controlar la visualización
+
+  const mostrarExperiencias = mostrarMas ? experiencias : experiencias.slice(0, 3); // Muestra solo 3 por defecto
+
+  const toggleMostrarMas = () => {
+    setMostrarMas(!mostrarMas); // Cambia el estado para mostrar más o menos
+  };
+
   return (
     <div
       id="clients"
@@ -60,7 +67,7 @@ const Clientes = () => {
       {/* Franja negra con el título "Clientes" */}
       <div style={{
         backgroundColor: '#595656',
-        height: '80px',
+        height: '60px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -79,7 +86,7 @@ const Clientes = () => {
       {/* Contenido */}
       <Container style={{ position: 'relative', zIndex: 2, marginTop: '20px' }}>
         <Row>
-          {experiencias.map((experiencia) => (
+          {mostrarExperiencias.map((experiencia) => (
             <Col xs={12} sm={6} md={4} key={experiencia.id} className="mb-4">
               <Card style={{
                 borderRadius: '8px',
@@ -104,12 +111,35 @@ const Clientes = () => {
             </Col>
           ))}
         </Row>
+
+        {/* Botón Mostrar más */}
+        {experiencias.length > 3 && (
+          <div style={{ textAlign: 'center', margin: '20px 0' }}>
+            <Button
+              variant="primary"
+              onClick={toggleMostrarMas}
+              style={{
+                backgroundColor: '#595656',
+                border: 'none',
+                padding: '12px 24px',
+                fontSize: '1rem',
+                width: '100%',
+                maxWidth: '200px',
+                height: '50px',
+                borderRadius: '0',
+              }}
+            >
+              {mostrarMas ? 'Mostrar menos' : 'Mostrar mas'}
+            </Button>
+          </div>
+        )}
       </Container>
     </div>
   );
 };
 
 export default Clientes;
+
 
 
 

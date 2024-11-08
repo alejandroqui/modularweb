@@ -31,7 +31,7 @@ const FAQ = () => {
         {/* Header */}
         <div style={{
           backgroundColor: '#595656',
-          height: '80px',
+          height: '60px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
