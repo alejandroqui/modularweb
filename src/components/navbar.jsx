@@ -33,7 +33,8 @@ const MyNavbar = () => {
             <Nav.Link href="#clients" style={{ color: 'white' }}>Nuestros Clientes</Nav.Link>
             <Nav.Link href="#Us" style={{ color: 'white' }}>Nosotros</Nav.Link>
             <Nav.Link href="#faq" style={{ color: 'white' }}>Preguntas Frecuentes</Nav.Link>
-            <Nav.Link href="#contact" style={{ color: 'white' }}>Contáctanos!</Nav.Link>
+            <Nav.Link href="#contact" style={{ color: 'white' }}>Contáctanos</Nav.Link>
+            <Nav.Link href="https://tu-tienda-virtual.com" target="_blank" style={{ color: 'white' }}>Tienda Virtual</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
@@ -42,6 +43,12 @@ const MyNavbar = () => {
 };
 
 export default MyNavbar;
+
+
+
+
+
+
 
 
 

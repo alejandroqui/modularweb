@@ -1,37 +1,15 @@
 import React from 'react';
 import { Carousel, Row, Col, Container } from 'react-bootstrap';
-import img1 from '../assets/banner3.jpeg'; 
-import img2 from '../assets/banner1.jpeg';
-import img3 from '../assets/banner5.jpeg';
-import img4 from '../assets/banner8.jpeg';
-import img5 from '../assets/banner4.jpeg';
-import img6 from '../assets/banner6.jpeg';
-import img7 from '../assets/banner23.png';
-import img8 from '../assets/banner24.png';
-import img9 from '../assets/banner9.jpeg';
-import img10 from '../assets/banner20.jpeg';
-import img11 from '../assets/banner27.jpeg';
-import img12 from '../assets/banner21.jpeg';
-import img13 from '../assets/banner36.jpeg';
-import img14 from '../assets/banner40.jpeg';
-import img15 from '../assets/banner39.jpeg';
+import img1 from '../assets/banner/1.png'; 
+import img2 from '../assets/banner/2.png';
+import img3 from '../assets/banner/3.png';
+import img4 from '../assets/banner/4.png';
 
 const images = [
   { src: img1, alt: "Primera imagen del banner" },
   { src: img2, alt: "Segunda imagen del banner" },
   { src: img3, alt: "Tercera imagen del banner" },
   { src: img4, alt: "Cuarta imagen del banner" },
-  { src: img5, alt: "Quinta imagen del banner" },
-  { src: img6, alt: "Sexta imagen del banner" },
-  { src: img7, alt: "Séptima imagen del banner" },
-  { src: img8, alt: "Octava imagen del banner" },
-  { src: img9, alt: "Novena imagen del banner" },
-  { src: img10, alt: "Décima imagen del banner" },
-  { src: img11, alt: "Undécima imagen del banner" },
-  { src: img12, alt: "Duodécima imagen del banner" },
-  { src: img13, alt: "Decimotercera imagen del banner" },
-  { src: img14, alt: "Decimocuarta imagen del banner" },
-  { src: img15, alt: "Decimoquinta imagen del banner" },
 ];
 
 const Banner = () => {
@@ -46,8 +24,8 @@ const Banner = () => {
               alt={image.alt}
               style={{
                 objectFit: 'cover',
-                width: '100%', // Asegura que la imagen ocupe todo el ancho en móviles
-                height: 'auto', // Mantiene la proporción de la imagen
+                width: '100%',
+                height: '100%', // Asegura que ocupe la altura definida en CSS
               }}
             />
           </Carousel.Item>
@@ -85,16 +63,14 @@ const Banner = () => {
       <style>{`
         /* Estilo para imágenes en pantallas pequeñas (móviles) */
         .banner-image {
-          height: 250px; /* Altura para pantallas pequeñas */
+          height: 250px; /* Altura fija para pantallas pequeñas */
         }
 
         /* Estilo para pantallas más grandes */
         @media (min-width: 768px) {
           .banner-image {
-            max-height: 400px; /* Limita la altura máxima en pantallas grandes */
-            width: 80%; /* Hace que la imagen sea más angosta en pantallas grandes */
-            margin-left: auto;
-            margin-right: auto;
+            height: 400px; /* Altura fija para pantallas grandes */
+            max-height: 600px; /* Limita la altura máxima */
           }
         }
       `}</style>
@@ -103,6 +79,7 @@ const Banner = () => {
 };
 
 export default Banner;
+
 
 
 

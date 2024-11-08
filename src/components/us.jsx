@@ -65,7 +65,7 @@ const Nosotros = () => {
                     <Card.Body style={{ display: 'flex', flexDirection: 'column', padding: '20px' }}>
                       <Card.Title style={{ fontSize: '1.5rem' }}>Nuestros CEO</Card.Title>
                       <Card.Text style={{ fontSize: '1rem', flex: 1, textAlign: 'justify' }}>
-                        Nuestros CEO han liderado la venta de muebles modulares desde 2020,
+                        Nuestros CEO han liderado las operaciones de Outlet Modular desde 2020,
                         innovando y ofreciendo productos funcionales y estéticamente agradables.
                         <br /><br />
                         Gracias a su liderazgo, nuestra compañía se ha establecido como un referente en
