@@ -97,26 +97,47 @@ const Productos = () => {
               <div key={categoria} style={{ marginBottom: '40px' }}>
                 <h2 style={{ color: 'white', fontSize: '1.8rem', textTransform: 'capitalize' }}>{categoria}</h2>
                 <Row>
-                  {productosVisibles.map((producto) => (
-                    <Col key={producto.id} xs={6} sm={6} md={4} className="mb-4">
-                      <Card onClick={() => handleCardClick(producto)} style={{ cursor: 'pointer' }}>
-                        <Card.Img variant="top" src={producto.img} style={{ height: '200px', objectFit: 'cover' }} />
-                        <Card.Body style={{ padding: '10px' }}>
-                          <Card.Title style={{ fontSize: '1.25rem', marginBottom: '5px' }}>{producto.nombre}</Card.Title>
-                          <Card.Text style={{ fontSize: '0.9rem', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>
-                            {producto.descripcion}
-                          </Card.Text>
-                          <Card.Text style={{ fontSize: '0.9rem', marginTop: '5px' }}>
-                            Precio: {producto.precio}
-                          </Card.Text>
-                          <Card.Text style={{ fontSize: '0.9rem', marginTop: '5px' }}>
-                            Ref: {producto.ref}
-                          </Card.Text>
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                  ))}
-                </Row>
+  {productosVisibles.map((producto) => (
+    <Col key={producto.id} xs={6} sm={6} md={4} className="mb-4">
+      <Card
+        onClick={() => handleCardClick(producto)}
+        style={{ cursor: 'pointer', height: '100%', display: 'flex', flexDirection: 'column' }}
+      >
+        <Card.Img
+          variant="top"
+          src={producto.img}
+          style={{ height: '200px', objectFit: 'cover' }}
+        />
+        <Card.Body style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '10px', flexGrow: 1 }}>
+          <div>
+            <Card.Title style={{ fontSize: '1.25rem', marginBottom: '5px' }}>{producto.nombre}</Card.Title>
+            <Card.Text
+              style={{
+                fontSize: '0.9rem',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                display: '-webkit-box',
+                WebkitLineClamp: 2,
+                WebkitBoxOrient: 'vertical',
+              }}
+            >
+              {producto.descripcion}
+            </Card.Text>
+          </div>
+          <div>
+            <Card.Text style={{ fontSize: '0.9rem', marginTop: '5px' }}>
+              Precio: {producto.precio}
+            </Card.Text>
+            <Card.Text style={{ fontSize: '0.9rem', marginTop: '5px' }}>
+              Ref: {producto.ref}
+            </Card.Text>
+          </div>
+        </Card.Body>
+      </Card>
+    </Col>
+  ))}
+</Row>
+
 
                 {/* Botón Mostrar más a la izquierda */}
                 {productosCategoria.length > 3 && (
