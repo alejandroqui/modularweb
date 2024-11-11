@@ -501,7 +501,7 @@ export const productos = [
 
     { 
         id: 47, 
-        nombre: 'Escritorio en L Asturias Caramelo',                  
+        nombre: 'Escritorio en L Asturias Gales',                  
         descripcion: 'Diseñado para brindar un espacio de trabajo amplio y organizado, el Escritorio en L Asturias es ideal para oficinas y espacios de estudio. Su formato en L permite aprovechar al máximo las esquinas, optimizando el uso del espacio y ofreciendo suficiente superficie para colocar equipos, documentos y herramientas de trabajo.', 
         img: producto47, 
         categoria: 'estudio',
@@ -511,7 +511,7 @@ export const productos = [
 
     { 
         id: 48, 
-        nombre: 'Escritorio en L Asturias Duna',                      
+        nombre: 'Escritorio en L Asturias Rovere',                      
         descripcion: 'Diseñado para brindar un espacio de trabajo amplio y organizado, el Escritorio en L Asturias es ideal para oficinas y espacios de estudio. Su formato en L permite aprovechar al máximo las esquinas, optimizando el uso del espacio y ofreciendo suficiente superficie para colocar equipos, documentos y herramientas de trabajo.', 
         img: producto48, 
         categoria: 'estudio',
