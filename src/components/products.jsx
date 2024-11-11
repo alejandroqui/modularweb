@@ -109,6 +109,9 @@ const Productos = () => {
                           <Card.Text style={{ fontSize: '0.9rem', marginTop: '5px' }}>
                             Precio: {producto.precio}
                           </Card.Text>
+                          <Card.Text style={{ fontSize: '0.9rem', marginTop: '5px' }}>
+                            Ref: {producto.ref}
+                          </Card.Text>
                         </Card.Body>
                       </Card>
                     </Col>
@@ -153,6 +156,7 @@ const Productos = () => {
                 <h4>Descripción</h4>
                 <p>{selectedProducto?.descripcion}</p>
                 <p style={{ fontSize: '0.9rem', fontWeight: 'bold' }}>Precio: {selectedProducto?.precio}</p>
+                <p style={{ fontSize: '0.9rem', fontWeight: 'bold' }}>Ref: {selectedProducto?.ref}</p>
               </div>
             </Col>
             <Col xs={12} md={6}>

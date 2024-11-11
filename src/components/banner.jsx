@@ -1,9 +1,9 @@
 import React from 'react';
 import { Carousel, Row, Col, Container } from 'react-bootstrap';
-import img1 from '../assets/banner/1.png'; 
-import img2 from '../assets/banner/2.png';
-import img3 from '../assets/banner/3.png';
-import img4 from '../assets/banner/4.png';
+import img1 from '../assets/banner/1.jpg'; 
+import img2 from '../assets/banner/2.jpg';
+import img3 from '../assets/banner/3.jpg';
+import img4 from '../assets/banner/4.jpg';
 
 const images = [
   { src: img1, alt: "Primera imagen del banner" },
