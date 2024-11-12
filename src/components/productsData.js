@@ -325,7 +325,7 @@ export const productos = [
         descripcion: 'Este moderno closet modular está diseñado para quienes buscan flexibilidad y estilo en el almacenamiento. Con estantes y cajones ajustables, el Closet Nova permite organizar ropa, calzado y accesorios de manera personalizada y ordenada.', 
         img: producto29, 
         categoria: 'habitación',
-        precio: '',
+        precio: '$800.000',
         ref: 'M01153CL-CR'  
     },
 
@@ -445,7 +445,7 @@ export const productos = [
         descripcion: 'El Closet Bari modular destaca por su diseño elegante y su capacidad de adaptarse a cualquier espacio. Con estantes ajustables, barras para colgar y cajones amplios, permite una organización personalizada para mantener la ropa y accesorios en perfecto orden. Su estructura modular es ideal para optimizar cada rincón, adaptándose a diferentes tamaños de habitación.', 
         img: producto41, 
         categoria: 'habitación',
-        precio: '$650.000',
+        precio: '$1.100.000',
         ref: 'M01614CL-GSWE'  
     },
 
@@ -455,7 +455,7 @@ export const productos = [
         descripcion: 'El Closet Bari modular destaca por su diseño elegante y su capacidad de adaptarse a cualquier espacio. Con estantes ajustables, barras para colgar y cajones amplios, permite una organización personalizada para mantener la ropa y accesorios en perfecto orden. Su estructura modular es ideal para optimizar cada rincón, adaptándose a diferentes tamaños de habitación.', 
         img: producto42, 
         categoria: 'habitación',
-        precio: '$650.000',
+        precio: '$1.100.000',
         ref: 'M01614CL-DUBL'  
     },
 
@@ -465,7 +465,7 @@ export const productos = [
         descripcion: 'El Closet Bari modular destaca por su diseño elegante y su capacidad de adaptarse a cualquier espacio. Con estantes ajustables, barras para colgar y cajones amplios, permite una organización personalizada para mantener la ropa y accesorios en perfecto orden. Su estructura modular es ideal para optimizar cada rincón, adaptándose a diferentes tamaños de habitación.', 
         img: producto43, 
         categoria: 'habitación',
-        precio: '$650.000',
+        precio: '$1.100.000',
         ref: 'M01614CL-ROBL'  
     },
 
