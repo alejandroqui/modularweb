@@ -24,7 +24,7 @@ const Footer = () => {
             <a href="https://wa.me/3052423779" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faWhatsapp} style={{ fontSize: '30px', color: 'white', margin: '0 10px' }} />
             </a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/outletmodular/" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faInstagram} style={{ fontSize: '30px', color: 'white', margin: '0 10px' }} />
             </a>
           </Col>
