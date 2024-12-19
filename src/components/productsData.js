@@ -205,7 +205,7 @@ export const productos = [
         descripcion: 'Esta mesa para TV de hasta 65 pulgadas combina diseño moderno y funcionalidad. Fabricada con materiales resistentes, ofrece un amplio espacio de almacenamiento en compartimentos abiertos y cerrados, ideal para dispositivos multimedia y accesorios decorativos.', 
         img: producto15, 
         categoria: 'sala',
-        precio: '$280.000',
+        precio: '$300.000',
         ref: 'EP00441MT-DUBL' 
     },
 
