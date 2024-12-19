@@ -210,16 +210,6 @@ export const productos = [
     },
 
     { 
-        id: 16, 
-        nombre: 'Mesa tv Tunez modular',                              
-        descripcion: 'La Mesa TV Túnez Modular es una pieza elegante y versátil que combina funcionalidad y estilo en cualquier sala de estar. Con un diseño modular, permite adaptar su configuración según tus necesidades y el espacio disponible.', 
-        img: producto16, 
-        categoria: 'sala',
-        precio: '$300.000',
-        ref: 'RLB8203' 
-    },
-
-    { 
         id: 17, 
         nombre: 'Mesa tv y sonido Prato Ceniza 32"',                  
         descripcion: 'La Mesa TV y Sonido Prato Rovere 32" es la opción ideal para quienes buscan combinar estilo y funcionalidad en un solo mueble. Su diseño elegante en un acabado de roble aporta un aire cálido y moderno, perfecto para cualquier sala de estar.', 
